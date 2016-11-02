@@ -10,7 +10,7 @@
 
     // This is a freebie we are using the GameService to help keep our controller clean. The GameServie will be in charge of creating and shuffling the deck.
     gc.deck = GameService.getDeck()
-
+    
     // Create two card variables. These will be responsible
     // for keeping track of our selections as we click cards.
     gc.firstSelection = null
@@ -80,6 +80,11 @@
       }
     }
     // Bonus Challenge: Write a function on gc that can reset the game and add a button that calls it
-
+    gc.reset = function(){
+      debugger
+      gc.deck = GameService.getDeck()
+      gc.attempts = 0
+      gc.pairs = 0      
+    }
   }
 } ())
